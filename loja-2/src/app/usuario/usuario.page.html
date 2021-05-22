@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" method="post" action="">
+    
+        
+       
+            
+             
+
+    <ion-item>
+      <ion-label >Email:</ion-label>
+      <ion-input type="text"  id="email" placeholder="Email" name="email" value="" ngModel required></ion-input>
+    </ion-item>
+      
+  <ion-item>
+    <ion-label>senha:</ion-label>
+    <ion-input type="passaword" id="senha" name="senha" placeholder="Senha" value="" ngModel required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nome:</ion-label>
+    <ion-input type="text" id="nome" placeholder="Nome" name="nome" value="" ngModel required></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label >CPF/CNPJ:</ion-label>
+    <ion-input type="number"  id="doc" placeholder="CPF/CNPJ" name="doc" value="" ngModel required></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label>Telefone:</ion-label>
+    <ion-input type="text"  id="telefone" placeholder="Telefone" name="telefone" value="" ngModel required></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label>Endereço:</ion-label>
+    <ion-input type="text" id="endereco" placeholder="Endereço" name="endereco" value="" ngModel required></ion-input>
+  </ion-item>
+    
+  <section>
+    <ion-button type="submit" color="success">Confirmar</ion-button>
+    <ion-button type="reset" color="danger">Cancelar</ion-button>
+  </section>
+
+
+
+</form>
+
+</ion-content>

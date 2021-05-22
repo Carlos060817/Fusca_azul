@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Filtrar Estoque</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+      <ion-radio-group value="loja" [(ngModel)]="filtro">
+
+        <ion-list-header>
+          <ion-label>Tipos de Filtros</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+          <ion-label>Loja</ion-label>
+          <ion-radio slot="start" value="loja"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Tipo</ion-label>
+          <ion-radio slot="start" value="tipo"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+   <ion-item *ngIf="filtro=='loja'">
+     <ion-label>Nome da Loja</ion-label>
+     <ion-input type="text" value="" [(ngModel)]="loja"></ion-input>
+   </ion-item>
+
+   <ion-item *ngIf="filtro=='tipo'">
+     <ion-label>Tipo de Veículo</ion-label>
+     <ion-input type="text" value="" [(ngModel)]="tipo"></ion-input>
+   </ion-item>
+
+   <ion-button color="secondary" (click)="filtrar()">Filtrar</ion-button>
+
+   <ion-button color="dark" (click)="limparFiltros()">Limpar Filtros</ion-button>
+
+</ion-content>
